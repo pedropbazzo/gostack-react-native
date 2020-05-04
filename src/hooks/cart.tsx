@@ -60,7 +60,7 @@ const CartProvider: React.FC = ({ children }) => {
       const findProduct = products.find(p => p.id === product.id);
 
       if (findProduct) {
-        increment(product.id);
+        return increment(product.id);
       }
 
       setProducts([...products, { ...product, quantity: 1 }]);
